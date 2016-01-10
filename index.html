@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Celluar Automata</title>
+		<script type='text/javascript'>
+			function drawGrid() {
+				var ctx = document.getElementById('canvas');
+				var gridOptions = {
+					minorLines: {
+						separation: 10, 
+						color: '#000000'
+					}, 
+				}; 
+
+				drawGridLines(ctx, gridOptions.minorLines);
+
+				return;
+			}
+
+			function drawGridLines(ctx, lineOptions) {
+				var width  = ctx.width;
+				var height = ctx.height;
+				var ctx = ctx.getContext('2d');
+				ctx.strokeStyle = lineOptions.color;
+				ctx.strokeWidth = 1;
+				ctx.beginPath();
+				var count = null;
+				var i = null;
+				var x = null;
+				var y = null;
+
+				count = Math.floor(width / lineOptions.separation);
+				
+				for(i = 1; i <= count; i++) {
+					x = (i * lineOptions.separation);
+					ctx.moveTo(x, 0);
+					ctx.lineTo(x, height);
+					ctx.stroke();
+				}
+
+				count = Math.floor(height / lineOptions.separation);
+
+				for(i = 1; i <= count; i++) {
+					y = (i * lineOptions.separation);
+					ctx.moveTo(0, y);
+					ctx.lineTo(width, y);
+					ctx.stroke();
+				}
+
+				ctx.closePath();
+
+				return;
+			}
+		</script>
+	</head>
+
+	<body onload='drawGrid()'>
+		<canvas id='canvas' width='600', height='600'></canvas>
+	</body>
+</html>
