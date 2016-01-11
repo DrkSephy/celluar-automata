@@ -29,3 +29,8 @@ function renderGrid(canvas, context, gridPixelSize, color) {
 
 	context.restore();
 }
+
+module.exports = {
+	drawGrid: drawGrid,
+	renderGrid: renderGrid
+}
