@@ -18,9 +18,9 @@ var opts = assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts)); 
 
 
-gulp.task('watch', bundle); // so you can run `gulp js` to build the file
-b.on('update', bundle); // on any dep update, runs the bundler
-b.on('log', gutil.log); // output build logs to terminal
+gulp.task('watch', bundle); 
+b.on('update', bundle); 
+b.on('log', gutil.log); 
 
 function bundle() {
   return b.bundle()
