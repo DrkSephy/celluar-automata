@@ -16,9 +16,22 @@ function configureGrid(numRows, numCols) {
 			grid[i][j] = -1;
 		}
 	}
-	console.log(grid);
+
+	return grid;
+}
+
+/**
+ * @param {object} grid The grid to print.
+ * @param {number} numRows The number of rows.
+ * @returns {undefined}
+*/
+function printGrid(grid, numRows) {
+	for(var i = 0; i < numRows; i++) {
+		console.log(grid[i]);
+	}
 }
 
 module.exports = {
-	configureGrid: configureGrid
+	configureGrid: configureGrid,
+	printGrid: printGrid
 }
