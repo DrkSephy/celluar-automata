@@ -40,8 +40,22 @@ function drawRectangle(context) {
 	context.fillRect(0, 0, 15, 15);
 }
 
+
+/**
+ * @param {object} context The element to draw to.
+ * @param {array} squares An array of objects containing x/y draw locations.
+ * @returns {undefined}
+*/
+function fillSquares(context, squares) {
+	context.fillStyle = 'green';
+	for(var i = 0; i < squares.length; i++) {
+		context.fillRect(squares[i].x * 15, squares[i].y * 15, 15, 15);
+	}
+}
+
 module.exports = {
 	drawGrid: drawGrid,
 	renderGrid: renderGrid,
-	drawRectangle: drawRectangle
+	drawRectangle: drawRectangle,
+	fillSquares: fillSquares
 }
