@@ -2,6 +2,7 @@ function drawGrid() {
 	var canvas = document.getElementById('grid');
 	var context = canvas.getContext('2d');
 	renderGrid(canvas, context, 15, 'black');
+	drawRectangle(context);
 }
 
 function renderGrid(canvas, context, gridPixelSize, color) {
@@ -30,7 +31,13 @@ function renderGrid(canvas, context, gridPixelSize, color) {
 	context.restore();
 }
 
+function drawRectangle(context) {
+	context.fillStyle = 'green';
+	context.fillRect(0, 0, 15, 15);
+}
+
 module.exports = {
 	drawGrid: drawGrid,
-	renderGrid: renderGrid
+	renderGrid: renderGrid,
+	drawRectangle: drawRectangle
 }
