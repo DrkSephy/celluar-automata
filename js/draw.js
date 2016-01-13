@@ -1,3 +1,7 @@
+/**
+ * Module containing all methods for drawing to canvas.
+*/
+
 function drawGrid() {
 	var canvas = document.getElementById('grid');
 	var context = canvas.getContext('2d');

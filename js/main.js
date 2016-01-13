@@ -1,3 +1,5 @@
+var draw = require('./draw.js');
 var grid = require('./grid.js');
 
-grid.drawGrid();
+draw.drawGrid();
+grid.configureGrid(15, 15);
