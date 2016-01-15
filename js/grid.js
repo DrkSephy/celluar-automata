@@ -21,6 +21,15 @@ function configureGrid(numRows, numCols) {
 }
 
 /**
+ * @param {object} grid The state of the simulation.
+ * @param {number} row The row to search.
+ * @param {number} col The col to search.
+*/
+function isCellEmpty(grid, row, col) {
+	return grid[row][col] == -1 ? true : false;
+}
+
+/**
  * @param {object} grid The grid to print.
  * @param {number} numRows The number of rows.
  * @returns {undefined}
@@ -33,5 +42,6 @@ function printGrid(grid, numRows) {
 
 module.exports = {
 	configureGrid: configureGrid,
+	isCellEmpty: isCellEmpty,
 	printGrid: printGrid
 }
