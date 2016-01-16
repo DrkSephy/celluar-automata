@@ -2,15 +2,7 @@
  * Module containing all methods for drawing to canvas.
 */
 
-function drawGrid(config) {
-	var canvas = document.getElementById('grid');
-	var context = canvas.getContext('2d');
-	renderGrid(canvas, context, config.cellSize, config.lineColor);
-	drawRectangle(context);
-}
-
 function renderGrid(canvas, context, gridPixelSize, color) {
-	context.save();
 	context.lineWidth = 0.5;
 	context.strokeStyle = color;
 
@@ -31,8 +23,6 @@ function renderGrid(canvas, context, gridPixelSize, color) {
 		context.closePath();
 		context.stroke();
 	}
-
-	context.restore();
 }
 
 function drawRectangle(context) {
@@ -54,7 +44,6 @@ function fillSquares(context, squares) {
 }
 
 module.exports = {
-	drawGrid: drawGrid,
 	renderGrid: renderGrid,
 	drawRectangle: drawRectangle,
 	fillSquares: fillSquares
