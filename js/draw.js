@@ -2,10 +2,10 @@
  * Module containing all methods for drawing to canvas.
 */
 
-function drawGrid() {
+function drawGrid(config) {
 	var canvas = document.getElementById('grid');
 	var context = canvas.getContext('2d');
-	renderGrid(canvas, context, 15, 'black');
+	renderGrid(canvas, context, config.cellSize, config.lineColor);
 	drawRectangle(context);
 }
 

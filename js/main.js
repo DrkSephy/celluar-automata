@@ -1,7 +1,16 @@
 var draw = require('./draw.js');
 var grid = require('./grid.js');
 
-draw.drawGrid();
+var CONFIG = {
+	height: 600,
+	width:  600, 
+	lineColor: 'black',
+	fillColor: 'green',
+	lineWidth: 0.5,
+	cellSize:  15
+}
+
+draw.drawGrid(CONFIG);
 var canvas = document.getElementById('grid');
 var context = canvas.getContext('2d');
 console.log(typeof (context));
