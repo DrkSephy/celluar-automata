@@ -40,6 +40,58 @@ function printGrid(grid, numRows) {
 	}
 }
 
+/**
+ * @param {object} grid The grid object.
+ * @param {number} row The row of the cell to check.
+ * @param {number} col The col of the cell to check.
+*/
+function checkNeighbors(grid, row, col) {
+	var cell = grid[row][col];
+	var numNeighborsAlive = 0;
+	
+	// Top left neighbor
+	if(grid[row - 1][col - 1] !== -1) { 
+		numNeighborsAlive += 1;
+	} 
+
+	// Top neighbor
+	if(grid[row - 1][col] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Top right neighbor
+	if(grid[row - 1][col + 1] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Left neighbor
+	if(grid[row][col - 1] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Right neighbor
+	if(grid[row][col + 1] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Bottom left neighbor
+	if(grid[row + 1][col - 1] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Bottom neighbor
+	if(grid[row + 1][col] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	// Bottom right neighbor
+	if(grid[row + 1][col + 1] !== -1) {
+		numNeighborsAlive += 1;
+	}
+
+	return numNeighborsAlive;
+}
+
 module.exports = {
 	configureGrid: configureGrid,
 	isCellEmpty: isCellEmpty,
