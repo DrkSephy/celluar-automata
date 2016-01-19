@@ -50,42 +50,42 @@ function checkNeighbors(grid, row, col) {
 	var numNeighborsAlive = 0;
 	
 	// Top left neighbor
-	if(grid[row - 1][col - 1] !== -1) { 
+	if(grid[row - 1][col - 1] !== -1 && grid[row - 1][col - 1] !== undefined) { 
 		numNeighborsAlive += 1;
 	} 
 
 	// Top neighbor
-	if(grid[row - 1][col] !== -1) {
+	if(grid[row - 1][col] !== -1 && grid[row - 1][col] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Top right neighbor
-	if(grid[row - 1][col + 1] !== -1) {
+	if(grid[row - 1][col + 1] !== -1 && grid[row - 1][col + 1] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Left neighbor
-	if(grid[row][col - 1] !== -1) {
+	if(grid[row][col - 1] !== -1 && grid[row][col - 1] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Right neighbor
-	if(grid[row][col + 1] !== -1) {
+	if(grid[row][col + 1] !== -1 && grid[row][col + 1] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Bottom left neighbor
-	if(grid[row + 1][col - 1] !== -1) {
+	if(grid[row + 1][col - 1] !== -1 && grid[row + 1][col - 1] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Bottom neighbor
-	if(grid[row + 1][col] !== -1) {
+	if(grid[row + 1][col] !== -1 && grid[row + 1][col] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
 	// Bottom right neighbor
-	if(grid[row + 1][col + 1] !== -1) {
+	if(grid[row + 1][col + 1] !== -1 && grid[row + 1][col + 1] !== undefined) {
 		numNeighborsAlive += 1;
 	}
 
