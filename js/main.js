@@ -1,3 +1,4 @@
+console.log('??????');
 var draw = require('./draw.js');
 var grid = require('./grid.js');
 
