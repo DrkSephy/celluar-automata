@@ -91,9 +91,3 @@ function checkNeighbors(grid, row, col) {
 
 	return numNeighborsAlive;
 }
-
-module.exports = {
-	configureGrid: configureGrid,
-	isCellEmpty: isCellEmpty,
-	printGrid: printGrid
-}

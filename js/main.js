@@ -1,7 +1,6 @@
-var draw = require('./draw.js');
-var grid = require('./grid.js');
+import Draw from './draw.js'
 
-var CONFIG = {
+const CONFIG = {
 	height: 600,
 	width:  600, 
 	lineColor: 'black',
@@ -10,7 +9,9 @@ var CONFIG = {
 	cellSize:  15
 }
 
-var canvas = document.getElementById('grid');
-var context = canvas.getContext('2d');
+const canvas = document.getElementById('grid');
+const context = canvas.getContext('2d');
+const draw = new Draw();
+draw.helloWorld();
 draw.renderGrid(canvas, context, CONFIG.cellSize, CONFIG.lineColor);
 draw.fillSquares(context, [{'x': 0, 'y': 0}, {'x': 7, 'y': 8}, {'x': 13, 'y': 5}]);
