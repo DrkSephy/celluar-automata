@@ -11,6 +11,6 @@ const CONFIG = {
 
 const canvas = document.getElementById('grid');
 const context = canvas.getContext('2d');
-const draw = new Draw();
-draw.renderGrid(canvas, context, CONFIG.cellSize, CONFIG.lineColor);
-draw.fillSquares(context, [{'x': 0, 'y': 0}, {'x': 7, 'y': 8}, {'x': 13, 'y': 5}]);
+const draw = new Draw(canvas, context, CONFIG.cellSize, CONFIG.lineColor);
+draw.renderGrid(canvas, CONFIG.cellSize, CONFIG.lineColor);
+draw.fillSquares([{'x': 0, 'y': 0}, {'x': 7, 'y': 8}, {'x': 13, 'y': 5}]);
