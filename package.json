@@ -4,7 +4,8 @@
   "description": "Cellular Automata realized with JavaScript",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "gulp": "^3.9.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "node-libs-browser": "*",
+    "webpack": "*"
   }
 }
