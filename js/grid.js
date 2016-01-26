@@ -5,8 +5,10 @@
 
 class Grid {
 
-	constructor() {
-		
+	constructor(numRows, numCols) {
+		this.rows = numRows;
+		this.cols = numCols;
+		this.grid = this.configureGrid(this.rows, this.cols);
 	}
 
 	/**
@@ -31,8 +33,8 @@ class Grid {
 	 * @param {number} row The row to search.
 	 * @param {number} col The col to search.
 	*/
-	isCellEmpty(grid, row, col) {
-		return grid[row][col] == -1 ? true : false;
+	isCellEmpty(row, col) {
+		return this.grid[row][col] == -1 ? true : false;
 	}
 
 	/**
@@ -40,20 +42,9 @@ class Grid {
 	 * @param {number} numRows The number of rows.
 	 * @returns {undefined}
 	*/
-	printGrid(grid, numRows) {
-		for(var i = 0; i < numRows; i++) {
-			console.log(grid[i]);
-		}
-	}
-
-	/**
-	 * @param {object} grid The grid to print.
-	 * @param {number} numRows The number of rows.
-	 * @returns {undefined}
-	*/
-	printGrid(grid, numRows) {
-		for(var i = 0; i < numRows; i++) {
-			console.log(grid[i]);
+	printGrid() {
+		for(var i = 0; i < this.rows; i++) {
+			console.log(this.grid[i]);
 		}
 	}
 
@@ -62,7 +53,7 @@ class Grid {
 	 * @param {number} row The row of the cell to check.
 	 * @param {number} col The col of the cell to check.
 	*/
-	checkNeighbors(grid, row, col) {
+	checkNeighbors(row, col) {
 		var cell = grid[row][col];
 		var numNeighborsAlive = 0;
 		
@@ -110,3 +101,4 @@ class Grid {
 	}
 }
 
+export default Grid
