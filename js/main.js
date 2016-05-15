@@ -2,12 +2,12 @@ import Draw from './draw.js'
 import Grid from './grid.js'
 
 const CONFIG = {
-	height: 600,
-	width:  600, 
-	lineColor: 'black',
-	fillColor: 'green',
-	lineWidth: 0.5,
-	cellSize:  15
+  height: 600,
+  width:  600, 
+  lineColor: 'black',
+  fillColor: 'green',
+  lineWidth: 0.5,
+  cellSize:  15
 }
 
 const canvas = document.getElementById('grid');
